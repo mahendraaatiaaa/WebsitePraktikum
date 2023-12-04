@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut" href="image/Computer-Engineering.png">
+    <title>Selamat Datang</title>
+    <link rel="stylesheet" href="jadwal_praktikum.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav>
+    <div class="navList">
+        <a class="nama" href="landing_page.html">
+          <img src="image/Lambang ITS.png" alt="" style="width: 50px;">
+          <img src="image/Computer-Engineering.png" alt="" style="width: 50px;">
+          Teknik Komputer ITS</a>
+        <a href="perencanaan.html">Perencanaan</a>
+        <a href="jadwal_praktikum.html">Jadwal praktikum</a>
+    </div>
+    <div class="navprofile">
+      <a href="">Account
+        <img src="image/profile.png" alt="">
+      </a>
+    </div>
+  </nav>
+
+  <table class="data-table">
+    <?php
+      include "koneksi.php";
+    ?>
+    <?php
+      $tampil = mysqli_query($mysqli, "select * from courses");
+      $no = 1;
+      while($hasil = mysqli_fetch_array($tampil)){
+    ?>
+    <tr>
+      <td><?php echo $hasil['Cname']; ?></td>
+      <td><?php echo $hasil['Schedule']; ?></td>
+      <td><?php echo $hasil['Room']; ?></td>
+      <td><?php echo $hasil['Faculty']; ?></td>
+    </tr>
+    <?php
+      }
+    ?>
+  </table>
+
+  <div> 
+  <div>
+    <h2>Rencana Praktikum</h2> 
+  </div>
+  </div>
+     
+    <table style="border-collapse: collapse;" cellspacing="0">
+        <th style="padding: 10px;">Course Name</th>
+        <th style="padding: 10px; text-align:center;">Schedule</th>
+        <th style="padding: 10px; text-align:center;">Room</th>
+        <th style="padding: 10px; text-align:center;">Faculty</th>
+
+        <tr style="border-collapse: collapse;">
+          <td style="padding: 10px;">Rangkaian Digital</td>
+          <td style="padding: 10px; text-align: center;">Senin, 13 November 2023 - 14.00</td>
+          <td style="padding: 10px; text-align: center;">B-402</td>
+          <td style="padding: 10px; text-align: center;">FTEIC</td>
+
+        <tr style="border-collapse: collapse;">
+          <td style="padding: 10px;"></td>
+          <td style="padding: 10px; text-align: center;">Senin, 13 November 2023 - 16.00</td>
+          <td style="padding: 10px; text-align: center;">B-402</td>
+          <td style="padding: 10px; text-align: center;">FTEIC</td>
+
+        <tr style="border-collapse: collapse;">
+          <td style="padding: 10px;">Workshop Telematika</td>
+          <td style="padding: 10px; text-align: center;">Senin, 13 November 2023 - 10.00</td>
+          <td style="padding: 10px; text-align: center;">B-403</td>
+          <td style="padding: 10px; text-align: center;">FTEIC</td>
+
+        <tr style="border-collapse: collapse;">
+          <td style="padding: 10px;"></td>
+          <td style="padding: 10px; text-align: center;">Senin, 13 November 2023 - 13.00</td>
+          <td style="padding: 10px; text-align: center;">B-403</td>
+          <td style="padding: 10px; text-align: center;">FTEIC</td>
+
+        <tr style="border-collapse: collapse;">
+          <td style="padding: 10px;"></td>
+          <td style="padding: 10px; text-align: center;">Senin, 13 November 2023 - 15.00</td>
+          <td style="padding: 10px; text-align: center;">B-403</td>
+          <td style="padding: 10px; text-align: center;">FTEIC</td>
+
+          <tr style="border-collapse: collapse;">
+            <td style="padding: 10px;">Pengolahan Sinyal Digital</td>
+            <td style="padding: 10px; text-align: center;">Rabu, 15 November 2023 - 11.00</td>
+            <td style="padding: 10px; text-align: center;">TW-603</td>
+            <td style="padding: 10px; text-align: center;">FTEIC</td>
+  
+          <tr style="border-collapse: collapse;">
+            <td style="padding: 10px;"></td>
+            <td style="padding: 10px; text-align: center;">Rabu, 15 November 2023 - 13.30</td>
+            <td style="padding: 10px; text-align: center;">TW2-603</td>
+            <td style="padding: 10px; text-align: center;">FTEIC</td>
+  
+          <tr style="border-collapse: collapse;">
+            <td style="padding: 10px;"></td>
+            <td style="padding: 10px; text-align: center;">Rabu, 15 November 2023 - 15.45</td>
+            <td style="padding: 10px; text-align: center;">TW2-603</td>
+            <td style="padding: 10px; text-align: center;">FTEIC</td>
+    
+          <tr style="border-collapse: collapse;">
+            <td style="padding: 10px;">Rangkaian Listrik</td>
+            <td style="padding: 10px; text-align: center;">Selasa, 14 November 2023 - 13.00</td>
+            <td style="padding: 10px; text-align: center;">B-202</td>
+            <td style="padding: 10px; text-align: center;">FTEIC</td>
+
+          <tr style="border-collapse: collapse;">
+            <td style="padding: 10px;"></td>
+            <td style="padding: 10px; text-align: center;">Selasa, 14 November 2023 - 15.30</td>
+            <td style="padding: 10px; text-align: center;">B-202</td>
+            <td style="padding: 10px; text-align: center;">FTEIC</td>
+
+          <tr style="border-collapse: collapse;">
+            <td style="padding: 10px;">Rangkaian Elektronika</td>
+            <td style="padding: 10px; text-align: center;">Kamis, 16 November 2023 - 11.00</td>
+            <td style="padding: 10px; text-align: center;">B-202</td>
+            <td style="padding: 10px; text-align: center;">FTEIC</td>
+  
+          <tr style="border-collapse: collapse;">
+            <td style="padding: 10px;"></td>
+            <td style="padding: 10px; text-align: center;">Kamis, 16 November 2023 - 13.00</td>
+            <td style="padding: 10px; text-align: center;">B-202</td>
+            <td style="padding: 10px; text-align: center;">FTEIC</td>
+
+            <tr style="border-collapse: collapse;">
+              <td style="padding: 10px;"></td>
+              <td style="padding: 10px; text-align: center;">Kamis, 16 November 2023 - 15.00</td>
+              <td style="padding: 10px; text-align: center;">B-202</td>
+              <td style="padding: 10px; text-align: center;">FTEIC</td>
+
+              <tr style="border-collapse: collapse;">
+                <td style="padding: 10px;"></td>
+                <td style="padding: 10px; text-align: center;">Kamis, 16 November 2023 - 17.00</td>
+                <td style="padding: 10px; text-align: center;">B-202</td>
+                <td style="padding: 10px; text-align: center;">FTEIC</td>
+            
+                <tr style="border-collapse: collapse;">
+                  <td style="padding: 10px;"></td>
+                  <td style="padding: 10px; text-align: center;">Kamis, 16 November 2023 - 19.00</td>
+                  <td style="padding: 10px; text-align: center;">B-202</td>
+                  <td style="padding: 10px; text-align: center;">FTEIC</td>
+</body>
+</html>

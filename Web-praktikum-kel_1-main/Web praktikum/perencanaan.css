@@ -1,0 +1,75 @@
+nav{
+    position: fixed;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    background-color: #696969;
+}
+
+.navList a {
+    text-decoration: none;
+    color: #fdf5d8;
+    font-size: 20px;
+    margin-right: 15px;
+    line-height: 60px;
+    float: left;
+}
+
+.navList img{
+    padding: 0px 3px 3px 3px;
+}
+
+.navList .nama{
+    font-size: 25px;
+}
+
+.navProfile {
+    height: 60px;
+    float: right;
+}
+.navProfile a {
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 20px;
+    margin: 10px;
+    color: #fdf5d8;
+}
+
+section{
+    margin: 10px 5%;
+}
+
+section table th, td{
+    padding: 10px;
+}
+
+/* section table{
+    border: 1px solid black;
+} */
+
+section .except_name{
+    text-align: center;
+}
+
+td .btn {
+    padding: 5px 20px;
+    margin: 0px 100px;
+    color: white;
+    background-color: #7e7e7e;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 7px #525252;
+}
+  
+.btn:hover {
+    opacity: 1;
+}
+
+.btn:active {
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+}
